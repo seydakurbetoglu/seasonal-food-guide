@@ -5,6 +5,15 @@ A mobile-friendly guide that shows which vegetables, fruits and fish are in seas
 
 Developed as a final project for the Mobile Programming course at Bitlis Eren University.
 
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/home.png" width="220" alt="Home screen">
+  <img src="screenshots/detail.png" width="220" alt="Product details">
+  <img src="screenshots/shopping-list.png" width="220" alt="Shopping list">
+  <img src="screenshots/dark-theme.png" width="220" alt="Dark theme">
+</p>
+
 ## Features
 
 - Month selector with seasonal products for that month
