@@ -1,0 +1,9 @@
+{
+  "name": "Mevsimsel Gıda Rehberi",
+  "short_name": "Gıda Rehberi",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f1e8",
+  "theme_color": "#2f6f4e",
+  "description": "Ayına göre sebze, meyve ve balık önerileri sunan mobil uyumlu rehber."
+}

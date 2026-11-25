@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2f6f4e" />
+    <title>Mevsimsel Gıda Rehberi</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Mobil Cihazlar ve Uygulamalar</p>
+          <h1>Mevsimsel Gıda Rehberi</h1>
+        </div>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Temayı değiştir" title="Temayı değiştir">
+          <span aria-hidden="true">☾</span>
+        </button>
+      </header>
+
+      <main>
+        <section class="hero" aria-label="Bugünün önerileri">
+          <div class="hero-copy">
+            <p id="dateLabel">Bugünün mevsim ürünleri</p>
+            <h2 id="monthTitle">Mevsiminde ne yenir?</h2>
+            <p>
+              Ayına uygun sebze, meyve ve balıkları keşfet; favorilerini kaydet,
+              alışveriş listeni tek dokunuşla hazırla.
+            </p>
+          </div>
+          <img src="assets/seasonal-produce.svg" alt="Mevsimsel sebze ve meyveler" />
+        </section>
+
+        <section class="controls" aria-label="Filtreler">
+          <label class="search-box">
+            <span>Arama</span>
+            <input id="searchInput" type="search" placeholder="Elma, brokoli, hamsi..." autocomplete="off" />
+          </label>
+
+          <label class="select-box">
+            <span>Ay</span>
+            <select id="monthSelect" aria-label="Ay seç"></select>
+          </label>
+        </section>
+
+        <section class="segmented" aria-label="Kategori seçimi">
+          <button class="active" type="button" data-category="all">Tümü</button>
+          <button type="button" data-category="Sebze">Sebze</button>
+          <button type="button" data-category="Meyve">Meyve</button>
+          <button type="button" data-category="Balık">Balık</button>
+        </section>
+
+        <section class="summary-grid" aria-label="Özet">
+          <article>
+            <strong id="seasonName">İlkbahar</strong>
+            <span>Aktif mevsim</span>
+          </article>
+          <article>
+            <strong id="resultCount">0</strong>
+            <span>Uygun ürün</span>
+          </article>
+          <article>
+            <strong id="favoriteCount">0</strong>
+            <span>Favori</span>
+          </article>
+        </section>
+
+        <section class="content-layout">
+          <section>
+            <div class="section-heading">
+              <h2>Ürünler</h2>
+              <button id="clearFilters" type="button">Filtreleri temizle</button>
+            </div>
+            <div class="food-grid" id="foodGrid" aria-live="polite"></div>
+          </section>
+
+          <aside class="side-panel" aria-label="Alışveriş listesi">
+            <div class="section-heading">
+              <h2>Alışveriş Listem</h2>
+              <button id="clearList" type="button">Temizle</button>
+            </div>
+            <ul id="shoppingList"></ul>
+            <p class="empty-note" id="shoppingEmpty">Henüz ürün eklenmedi.</p>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="detailDialog">
+      <div class="dialog-card">
+        <button class="icon-button close-button" id="closeDialog" type="button" aria-label="Kapat" title="Kapat">
+          <span aria-hidden="true">×</span>
+        </button>
+        <p id="detailCategory" class="eyebrow"></p>
+        <h2 id="detailName"></h2>
+        <p id="detailMonths"></p>
+        <div class="detail-grid">
+          <article>
+            <h3>Faydası</h3>
+            <p id="detailBenefit"></p>
+          </article>
+          <article>
+            <h3>Saklama</h3>
+            <p id="detailStorage"></p>
+          </article>
+          <article>
+            <h3>Öneri</h3>
+            <p id="detailRecipe"></p>
+          </article>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>

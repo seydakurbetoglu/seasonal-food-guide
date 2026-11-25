@@ -1,0 +1,417 @@
+:root {
+  --bg: #f5f1e8;
+  --surface: #fffdf7;
+  --surface-strong: #ffffff;
+  --text: #203129;
+  --muted: #66736b;
+  --brand: #2f6f4e;
+  --brand-strong: #24583d;
+  --accent: #d65f3f;
+  --gold: #e3a92f;
+  --line: #ded7c8;
+  --shadow: 0 18px 45px rgba(31, 49, 41, 0.12);
+}
+
+[data-theme="dark"] {
+  --bg: #111814;
+  --surface: #1a241f;
+  --surface-strong: #223129;
+  --text: #edf5ef;
+  --muted: #aebcaf;
+  --brand: #79c798;
+  --brand-strong: #9bddb1;
+  --accent: #f08b64;
+  --gold: #e6be55;
+  --line: #334139;
+  --shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  width: min(1160px, 100%);
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0 18px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: clamp(1.55rem, 3vw, 2.4rem);
+}
+
+.icon-button {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.35rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(210px, 0.75fr);
+  align-items: center;
+  gap: 18px;
+  min-height: 245px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--surface), rgba(227, 169, 47, 0.16));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hero h2 {
+  margin-bottom: 10px;
+  font-size: clamp(1.85rem, 6vw, 4rem);
+  line-height: 1;
+}
+
+.hero p {
+  max-width: 620px;
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 225px;
+  object-fit: contain;
+}
+
+.controls,
+.summary-grid,
+.content-layout {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.controls {
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 220px);
+}
+
+.search-box,
+.select-box {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-strong);
+  color: var(--text);
+  padding: 0 14px;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 14px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.segmented button {
+  min-height: 40px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.segmented button.active {
+  background: var(--brand);
+  color: #fff;
+}
+
+.summary-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.summary-grid article,
+.side-panel,
+.food-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.summary-grid article {
+  padding: 16px;
+}
+
+.summary-grid strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--brand-strong);
+  font-size: 1.35rem;
+}
+
+.summary-grid span {
+  color: var(--muted);
+}
+
+.content-layout {
+  grid-template-columns: minmax(0, 1fr) 310px;
+  align-items: start;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 6px 0 12px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 1.18rem;
+}
+
+.section-heading button,
+.card-actions button,
+.list-item button {
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-strong);
+  color: var(--text);
+  padding: 0 12px;
+  font-weight: 700;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: 12px;
+}
+
+.food-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+}
+
+.food-card header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.food-card h3 {
+  margin-bottom: 4px;
+  font-size: 1.08rem;
+}
+
+.category-pill {
+  align-self: start;
+  border-radius: 999px;
+  background: rgba(47, 111, 78, 0.12);
+  color: var(--brand-strong);
+  padding: 5px 9px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.food-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.card-actions {
+  display: grid;
+  grid-template-columns: 1fr 42px;
+  gap: 8px;
+}
+
+.card-actions button.favorite {
+  padding: 0;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.side-panel {
+  position: sticky;
+  top: 12px;
+  padding: 14px;
+}
+
+#shoppingList {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 1fr 36px;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+
+.list-item button {
+  min-height: 32px;
+  padding: 0;
+}
+
+.empty-note {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+dialog {
+  width: min(620px, calc(100% - 24px));
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  padding: 0;
+}
+
+dialog::backdrop {
+  background: rgba(11, 17, 14, 0.55);
+}
+
+.dialog-card {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-strong);
+  color: var(--text);
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.detail-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.detail-grid article {
+  border-left: 4px solid var(--gold);
+  padding-left: 12px;
+}
+
+.detail-grid h3 {
+  margin-bottom: 4px;
+}
+
+.detail-grid p,
+#detailMonths {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .app-shell {
+    padding: 14px;
+  }
+
+  .hero,
+  .controls,
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 18px;
+  }
+
+  .hero img {
+    max-height: 165px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 470px) {
+  .segmented {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .topbar {
+    align-items: flex-start;
+  }
+}
