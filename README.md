@@ -1,3 +1,4 @@
+🇹🇷 [Türkçe için tıklayın](README.tr.md)
 # Seasonal Food Guide (Mevsimsel Gıda Rehberi)
 
 A mobile-friendly guide that shows which vegetables, fruits and fish are in season for the selected month in Turkey. Eating seasonal food is cheaper, fresher and more sustainable, but the information is scattered. This app puts it in one place.
