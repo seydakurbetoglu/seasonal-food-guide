@@ -4,6 +4,15 @@ Seçilen aya göre Türkiye'de hangi sebze, meyve ve balıkların mevsiminde old
 
 Bitlis Eren Üniversitesi Mobil Programlama dersi final projesi olarak geliştirildi.
 
+## Ekran Görüntüleri
+
+<p align="center">
+  <img src="screenshots/home.png" width="220" alt="Ana ekran">
+  <img src="screenshots/detail.png" width="220" alt="Ürün detayı">
+  <img src="screenshots/shopping-list.png" width="220" alt="Alışveriş listesi">
+  <img src="screenshots/dark-theme.png" width="220" alt="Koyu tema">
+</p>
+
 ## Özellikler
 
 - Aya göre mevsimsel ürün listesi
