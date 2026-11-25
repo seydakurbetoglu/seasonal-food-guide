@@ -2,7 +2,7 @@
 
 A mobile-friendly guide that shows which vegetables, fruits and fish are in season for the selected month in Turkey. Eating seasonal food is cheaper, fresher and more sustainable, but the information is scattered. This app puts it in one place.
 
-Final project for **BMU1422 Mobile Programming**, Bitlis Eren University, Computer Engineering (2025-2026 Spring).
+Developed as a final project for the Mobile Programming course at Bitlis Eren University.
 
 ## Features
 
